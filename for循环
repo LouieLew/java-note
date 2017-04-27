@@ -1,0 +1,79 @@
+package test;
+
+public class Test {
+	public static void main(String[] args) {
+		sanJiao(9);
+		lingXing(14);
+
+	}
+	public static void sanJiao(int i){
+		int z = 1;
+		for (int j = 1; j <= i; j++) {
+			for (int j2 = j; j2 <i ; j2++) {
+				System.out.print(" ");
+			}
+			for (int j2 = 1; j2 <= z; j2++) {
+				System.out.print("*");
+			}
+			z+=2;
+			System.out.println();
+		}
+	}
+
+	public static void lingXing(int x){
+		//x代表行数 x=10
+		if(x%2 == 0){//余数为0是偶数
+			x /= 2;
+			int n = 1;
+			for (int i = 1; i < (x+1); i++) {
+				for (int y = i; y < x; y++){
+					System.out.print(" ");
+				}
+				for (int z = i; z <= n; z++){
+					System.out.print("*");
+				}
+				n+=3;
+				System.out.println();
+			}
+			int m = x*2;
+			for (int i = 0; i < x; i++) {
+				
+				for(int y = 0; y < i;y++){
+					System.out.print(" ");
+				}
+				for(int j = 1; j < m; j++) {
+					System.out.print("*");
+				}
+				m-=2;
+				System.out.println();
+			}	
+		}else{//余数不为0是奇数
+			x = (x+1)/2;
+			int n = 1;
+			for (int i = 1; i < (x+1); i++) {
+				for (int y = i; y < x; y++){
+					System.out.print(" ");
+				}
+				for (int z = i; z <= n; z++){
+					System.out.print("*");
+				}
+				n+=3;
+				System.out.println();
+			}
+			int m = x*2;
+			for (int i = 0; i < x; i++) {
+				
+				for(int y = 0; y <= i;y++){
+					System.out.print(" ");
+				}
+				for(int j = 3; j < m; j++) {
+					System.out.print("*");
+				}
+				m-=2;
+				System.out.println();
+			}	
+		}
+	}
+	
+}
+
