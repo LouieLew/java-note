@@ -1,0 +1,31 @@
+//personName  -> person_name
+	public static String upToLow(String s){
+		char[] c = new char[s.length()];
+		StringBuffer sb = new StringBuffer();
+		c = s.toCharArray();
+		for (int i = 0; i < c.length; i++) {
+			if(Character.isUpperCase(c[i])){
+				sb.append("_");
+				c[i] = Character.toLowerCase(c[i]);
+			}
+			sb.append(c[i]);
+		}
+		return sb.toString();
+	}
+	
+	//person_name -> personName
+	public static String lowToUp(String s){
+		char[] c = new char[s.length()];
+		c = s.toCharArray();
+		StringBuffer sb = new StringBuffer();
+		for (int i = 0; i < c.length; i++) {
+			if(c[i] == '_'){
+				c[i] = ' ';
+				i+=1;
+				c[i] = Character.toUpperCase(c[i]);
+			}
+			sb.append(c[i]);
+		}
+		return sb.toString();
+	}
+	
